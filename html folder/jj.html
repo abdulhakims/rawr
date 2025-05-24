@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Online Store</title>
+    <link rel="stylesheet" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body, html {
+            width: 100%;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff;
+            color: #111;
+        }
+        header {
+            width: 100vw;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e63946;
+        }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .hero {
+            height: 450px;
+            border-radius: 12px;
+            position: relative;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 3rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0 0 0.5rem 0;
+            max-width: 500px;
+            font-weight: 800;
+            text-shadow: 2px 2px 7px rgba(0,0,0,0.7);
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 400px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+        }
+        .video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.video-background .content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+        .btn-primary {
+            margin-top: 1.5rem;
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            width: fit-content;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(230,57,70,0.6);
+        }
+        .btn-primary:hover {
+            background-color: #b9232c;
+            box-shadow: 0 6px 14px rgba(185,35,44,0.8);
+        }
+        .products {
+            margin-top: 3rem;
+        }
+        .products h2 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.75rem;
+        }
+        .product-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 1rem 1.25rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0 0 0.5rem 0;
+        }
+        .product-price {
+            font-weight: 700;
+            color: #e63946;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .product-btn {
+            background-color: #111;
+            color: white;
+            border: none;
+            padding: 0.5rem;
+            font-weight: 700;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+        .product-btn:hover {
+            background-color: #333;
+        }
+        footer {
+            margin-top: 4rem;
+            background-color: #111;
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="h1just">NIKE</h1>
+        <nav>
+            <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="mission.html">Mission</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Just Do It.</h1>
+        <p>Discover the latest sneakers, apparel & gear at Nike.</p>
+        <button class="btn-primary" onclick="alert('Explore new collection!')">Shop Now</button>
+    </section>
+    <div class="video-background">
+  <video autoplay muted loop playsinline>
+    <source src="../Video folder/nike.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <!-- Put your content here -->
+    <h1>Welcome to Nike</h1>
+  </div>
+</div>
+
+
+    <main>
+        <section class="products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img class="product-image" src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/83da7a74-99cc-4059-bd16-042e9af13878/air-jordan-1-mid-shoe-H9cqh1.png" alt="Air Jordan 1 Mid" />
+                    <div class="product-info">
+                        <h3 class="product-title">Air Jordan 1 Mid</h3>
+                        <div class="product-price">$125</div>
+                        <button class="product-btn" onclick="alert('Added Air Jordan 1 Mid to cart')">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img class="product-image" src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7313ad9e-17a0-4be9-9b67-0b4fbef5bae3/air-max-270-shoe-KkLcGR.png" alt="Nike Air Max 270" />
+                    <div class="product-info">
+                        <h3 class="product-title">Nike Air Max 270</h3>
+                        <div class="product-price">$150</div>
+                        <button class="product-btn" onclick="alert('Added Nike Air Max 270 to cart')">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img class="product-image" src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/22f28569-1f15-47e7-b8fc-48e7b6ed3caf/air-zoom-pegasus-40-road-running-shoes-KC1Ptr.png" alt="Nike Air Zoom Pegasus 40" />
+                    <div class="product-info">
+                        <h3 class="product-title">Nike Air Zoom Pegasus 40</h3>
+                        <div class="product-price">$130</div>
+                        <button class="product-btn" onclick="alert('Added Nike Air Zoom Pegasus 40 to cart')">Add to Cart</button>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img class="product-image" src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/7e98d702-59d6-47bc-b0c6-d8ba458aec60/sportswear-club-fleece-crew-8GHQgV.png" alt="Nike Sportswear Club Fleece Crew" />
+                    <div class="product-info">
+                        <h3 class="product-title">Sportswear Club Fleece Crew</h3>
+                        <div class="product-price">$65</div>
+                        <button class="product-btn" onclick="alert('Added Sportswear Club Fleece Crew to cart')">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&COPY; 2025 Nike.com &nbsp; &nbsp; All rights reserved.</p>
+    </footer>
+</body>
+</html>
